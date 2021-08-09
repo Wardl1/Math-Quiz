@@ -1,3 +1,6 @@
+"""Component 1 Main Menu GUI version 2
+this version continues on from the last with an
+addition button being the only change."""
 from tkinter import *
 
 
