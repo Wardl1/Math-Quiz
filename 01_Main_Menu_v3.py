@@ -4,7 +4,7 @@ buttons now in the GUI and all buttons have been formatted."""
 from tkinter import *
 
 
-class Math:
+class Math_quiz:
     def __init__(self):
         # Formatting variables
         background_color = "#66FFFF"  # light blue
@@ -104,5 +104,5 @@ class Math:
 if __name__ == "__main__":
     root = Tk()
     root.title("Math Quiz")
-    something = Math()
+    something = Math_quiz()
     root.mainloop()
