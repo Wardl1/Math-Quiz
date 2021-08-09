@@ -1,3 +1,7 @@
+"""Component 1 Main Menu GUI version 1
+this version just has the heading and a small set of instructions
+no buttons have been created yet"""
+
 from tkinter import *
 
 
