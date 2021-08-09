@@ -1,3 +1,6 @@
+"""Component 1 Main Menu GUI version 3
+this version continues on from the last with all
+buttons now in the GUI and all buttons have been formatted."""
 from tkinter import *
 
 
