@@ -1,8 +1,9 @@
 """Component 1 Main Menu GUI version 3
 this version continues on from the last with all
 buttons now in the GUI and all buttons have been formatted."""
-from tkinter import *
 
+from tkinter import *
+from functools import partial  # To prevent unwanted additional windows
 
 class Math_quiz:
     def __init__(self):
@@ -39,7 +40,7 @@ class Math_quiz:
                                       width=10,
                                       bg="#008CFF",  # darker blue
                                       fg="white",
-                                      command=self.math_addition())
+                                      command=self.math_addition)
         self.addition_button.grid(row=2)
 
         # Subtraction button (row 3)
@@ -49,56 +50,27 @@ class Math_quiz:
                                          width=10,
                                          bg="#008CFF",  # darker blue
                                          fg="white",
-                                         command=self.math_subtraction())
+                                         command=self.math_subtraction)
         self.subtraction_button.grid(row=3)
 
-        # multiplication button (row 4)
-        self.multiplication_button = Button(self.main_menu_frame, text="Multiplication",
-                                            font=("Arial", "14"),
-                                            padx=10, pady=10,
-                                            width=10,
-                                            bg="#008CFF",  # darker blue
-                                            fg="white",
-                                            command=self.math_multiplication())
-        self.multiplication_button.grid(row=4)
-
-        # Division button (row 5)
-        self.division_button = Button(self.main_menu_frame, text="Division",
-                                      font=("Arial", "14"),
-                                      padx=10, pady=10,
-                                      width=10,
-                                      bg="#008CFF",  # darker blue
-                                      fg="white",
-                                      command=self.math_division())
-        self.division_button.grid(row=5)
-
-        # All combined button (row 6)
+        # All combined button (row 4)
         self.combined_button = Button(self.main_menu_frame, text="All Combined",
                                       font=("Arial", "14"),
                                       padx=10, pady=10,
                                       width=10,
                                       bg="#008CFF",  # darker blue
                                       fg="white",
-                                      command=self.all_combined())
-        self.combined_button.grid(row=6)
+                                      command=self.all_combined)
+        self.combined_button.grid(row=4)
 
     def math_addition(self):
         print("1 + 1 = ")  # print statement to check function works
-        # get_addition = Addition()
-        # get_addition.help_text.configure(text="1 + 1 = ")
 
     def math_subtraction(self):
         print("1 - 1 = ")  # print statement to check function works
 
-    def math_multiplication(self):
-        print("1 x 1 = ")  # print statement to check function works
-
-    def math_division(self):
-        print("1 / 1 = ")  # print statement to check function works
-
     def all_combined(self):
         print("1 + 1 = ")  # print statement to check function works
-
 
 # main routine
 if __name__ == "__main__":
