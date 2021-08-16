@@ -78,9 +78,9 @@ class Math_quiz:
         get_question.question_label.configure(text="1 - 1 = ")
 
     def all_combined(self):
-        print("1 + 1 = ")  # print statement to check function works
+        print("1 + / - 1 = ")  # print statement to check function works
         get_question = Question_GUI(self)
-        get_question.question_label.configure(text="1 - 1 = ")
+        get_question.question_label.configure(text="1 + / - 1 = ")
 
 
 class Question_GUI:
