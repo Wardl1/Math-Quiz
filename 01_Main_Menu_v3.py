@@ -70,7 +70,7 @@ class Math_quiz:
         print("1 - 1 = ")  # print statement to check function works
 
     def all_combined(self):
-        print("1 + 1 = ")  # print statement to check function works
+        print("1 + / - 1 = ")  # print statement to check function works
 
 # main routine
 if __name__ == "__main__":
