@@ -16,12 +16,12 @@ class Math:
         self.main_menu_frame.grid()
 
         # Math Quiz heading (row 0)
-        self.math_quiz_label = Label(self.main_menu_frame,
-                                     text="Math Quiz",
-                                     font=("Arial", "16", "bold"),
-                                     bg=background_color,
-                                     padx=10, pady=10)
-        self.math_quiz_label.grid(row=0)
+        self.MathQuiz_label = Label(self.main_menu_frame,
+                                    text="Math Quiz",
+                                    font=("Arial", "16", "bold"),
+                                    bg=background_color,
+                                    padx=10, pady=10)
+        self.MathQuiz_label.grid(row=0)
 
         # Simple instructions given
         self.intstruction_label = Label(self.main_menu_frame,

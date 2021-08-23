@@ -9,7 +9,7 @@ from tkinter import *
 from functools import partial  # To prevent unwanted additional windows
 
 
-class Question_GUI:
+class QuestionGUI:
     def __init__(self):
         # Formatting variables
         background_color = "#3399FF"  # darker blue
@@ -84,5 +84,5 @@ class Question_GUI:
 if __name__ == "__main__":
     root = Tk()
     root.title("Math Quiz")
-    something = Question_GUI()
+    something = QuestionGUI()
     root.mainloop()

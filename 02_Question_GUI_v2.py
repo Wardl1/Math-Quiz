@@ -9,7 +9,8 @@ this will need to be fixed in version 3
 from tkinter import *
 from functools import partial  # To prevent unwanted additional windows
 
-class Math_quiz:
+
+class MathQuiz:
     def __init__(self):
         # Formatting variables
         background_color = "#66FFFF"  # light blue
@@ -20,12 +21,12 @@ class Math_quiz:
         self.main_menu_frame.grid()
 
         # Math Quiz heading (row 0)
-        self.math_quiz_label = Label(self.main_menu_frame,
-                                     text="Math Quiz",
-                                     font=("Arial", "16", "bold"),
-                                     bg=background_color,
-                                     padx=10, pady=10)
-        self.math_quiz_label.grid(row=0)
+        self.MathQuiz_label = Label(self.main_menu_frame,
+                                    text="Math Quiz",
+                                    font=("Arial", "16", "bold"),
+                                    bg=background_color,
+                                    padx=10, pady=10)
+        self.MathQuiz_label.grid(row=0)
 
         # Simple instructions given
         self.intstruction_label = Label(self.main_menu_frame,
@@ -69,21 +70,21 @@ class Math_quiz:
 
     def math_addition(self):
         print("1 + 1 = ")  # print statement to check function works
-        get_question = Question_GUI(self)
+        get_question = QuestionGUI(self)
         get_question.question_label.configure(text="1 + 1 = ")
 
     def math_subtraction(self):
         print("1 - 1 = ")  # print statement to check function works
-        get_question = Question_GUI(self)
+        get_question = QuestionGUI(self)
         get_question.question_label.configure(text="1 - 1 = ")
 
     def all_combined(self):
         print("1 + / - 1 = ")  # print statement to check function works
-        get_question = Question_GUI(self)
+        get_question = QuestionGUI(self)
         get_question.question_label.configure(text="1 + / - 1 = ")
 
 
-class Question_GUI:
+class QuestionGUI:
     def __init__(self, partner):
         # Formatting variables
         background_color = "#3399FF"  # darker blue
@@ -163,8 +164,8 @@ class Question_GUI:
 
 
 # main routine
-if __name__=="__main__":
+if __name__ == "__main__":
     root = Tk()
     root.title("Math Quiz")
-    something = Math_quiz()
+    something = MathQuiz()
     root.mainloop()
