@@ -3,7 +3,7 @@ Sets up design for the results GUI
 this trials setting the information as a table like display
 each item in each item in the list is given a new column and
 each item/question is given a new row
-close and enter buttons do not work yet
+close and export buttons do not work yet
 Results GUI is not connected to the other GUI's yet
 """
 
