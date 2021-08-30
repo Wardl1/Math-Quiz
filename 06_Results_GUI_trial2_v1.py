@@ -36,7 +36,7 @@ class ResultsGUI:
 
         # set up results frame for the results to display in
         self.results_frame = Frame(self.heading_frame)
-        self.results_frame.grid()
+        self.results_frame.grid(row=1)
 
         # set up headings for result output
         # question number heading
@@ -73,9 +73,9 @@ class ResultsGUI:
                                            font="Arial 12", justify=LEFT)
                 self.results_label.grid(row=row_num, column=col_num, pady=5)
 
-        # Export / Close buttons frame (row 3)
+        # Export / Close buttons frame (row 2)
         self.button_frame = Frame(self.heading_frame)
-        self.button_frame.grid(row=3, pady=10)
+        self.button_frame.grid(row=2, pady=10)
 
         # Export Button
         self.export_button = Button(self.button_frame, text="Export",
