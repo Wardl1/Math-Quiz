@@ -1,8 +1,10 @@
 """Component 3 Generate_Questions version 2
 this version is now connected to the GUI
 when next button is pressed it will also generate another question now
-when subtracting the answer can be negative this will need to be fixed in the next version
-when next question is pressed the question heading e.g question 1/10, doesnt change
+when subtracting the answer can be negative this will need
+to be fixed in the next version
+when next question is pressed the question heading e.g question 1/10,
+doesnt change
 """
 
 from tkinter import *
@@ -49,7 +51,8 @@ class MathQuiz:
         self.addition_button.grid(row=2)
 
         # Subtraction button (row 3)
-        self.subtraction_button = Button(self.main_menu_frame, text="Subtraction",
+        self.subtraction_button = Button(self.main_menu_frame,
+                                         text="Subtraction",
                                          font=("Arial", "14"),
                                          padx=10, pady=10,
                                          width=10,
@@ -59,7 +62,8 @@ class MathQuiz:
         self.subtraction_button.grid(row=3)
 
         # All combined button (row 4)
-        self.combined_button = Button(self.main_menu_frame, text="All Combined",
+        self.combined_button = Button(self.main_menu_frame,
+                                      text="All Combined",
                                       font=("Arial", "14"),
                                       padx=10, pady=10,
                                       width=10,
@@ -71,17 +75,20 @@ class MathQuiz:
     # math_addition function for when the addition_button is pressed
     def math_addition(self):
         print("1 + 1 = ")  # print statement to check function works
-        QuestionGUI(self, quest_type="add").generate_question()  # opens question GUI
+        # opens question GUI
+        QuestionGUI(self, quest_type="add").generate_question()
 
     # math_subtraction function for when the subtraction_button is pressed
     def math_subtraction(self):
         print("1 - 1 = ")  # print statement to check function works
-        QuestionGUI(self, quest_type="sub").generate_question()  # opens question GUI
+        # opens question GUI
+        QuestionGUI(self, quest_type="sub").generate_question()
 
     # all_combined function for when the combined_button is pressed
     def all_combined(self):
         print("1 + / - 1 = ")  # print statement to check function works
-        QuestionGUI(self, quest_type="both").generate_question()  # opens question GUI
+        # opens question GUI
+        QuestionGUI(self, quest_type="both").generate_question()
 
 
 class QuestionGUI:
@@ -93,20 +100,23 @@ class QuestionGUI:
         partner.subtraction_button.config(state=DISABLED)
         partner.combined_button.config(state=DISABLED)
 
-        # sets up question type to determine if its an add, sub or both question
+        # sets up question type to determine if its an add,
+        # sub or both question
         self.question_type = quest_type
 
-        # sets up question answer which will be needed to evaluate if the user is correct
+        # sets up question answer which will be needed to evaluate
+        # if the user is correct
         self.question_answer = ""
 
         # sets up child window (ie: help box)
         self.question_box = Toplevel()
 
         # if users press at top, closes help and 'releases' help button
-        self.question_box.protocol('WM_DELETE_WINDOW', partial(self.close_question,
-                                                               partner))
+        self.question_box.protocol('WM_DELETE_WINDOW',
+                                   partial(self.close_question, partner))
         # Question Frame
-        self.question_frame = Frame(self.question_box, width=300, bg=background_color)
+        self.question_frame = Frame(self.question_box, width=300,
+                                    bg=background_color)
         self.question_frame.grid()
 
         # Question Heading (row 0)
@@ -139,41 +149,50 @@ class QuestionGUI:
         self.evaluator_label.grid(row=3)
 
         # Sets up new frame for buttons to get a nice layout
-        self.button_frame = Frame(self.question_box, width=300, bg=background_color)
+        self.button_frame = Frame(self.question_box, width=300,
+                                  bg=background_color)
         self.button_frame.grid(row=1)
 
         # Close button (row 0, column 0)
         self.close_button = Button(self.button_frame, text="Close",
-                                   width=8, bg="light grey", font="arial 10 bold",
-                                   command=partial(self.close_question, partner))
+                                   width=8, bg="light grey",
+                                   font="arial 10 bold",
+                                   command=partial(self.close_question,
+                                                   partner))
         self.close_button.grid(row=0, column=0)
 
         # Enter button (row 0, column 1)
         self.enter_button = Button(self.button_frame, text="Enter",
-                                   width=8, bg="light grey", font="arial 10 bold",
+                                   width=8, bg="light grey",
+                                   font="arial 10 bold",
                                    command=partial(self.enter_question))
         self.enter_button.grid(row=0, column=1)
 
         # Next button (row 0, column 2)
         self.next_button = Button(self.button_frame, text="Next",
-                                  width=8, bg="light grey", font="arial 10 bold",
+                                  width=8, bg="light grey",
+                                  font="arial 10 bold",
                                   command=partial(self.generate_question))
         self.next_button.grid(row=0, column=2)
 
     def generate_question(self):
-        all_combined = ""  # all combined variable to switch between add and sub
+        # all combined variable to switch between add and sub
+        all_combined = ""
         num_1 = random.randint(0, 10)  # generates random number
         num_2 = random.randint(0, 10)
-        question = ""  # sets up question variable which is the text for the question_label
+        # sets up question variable which is the text for the question_label
+        question = ""
         if self.question_type == "both":
-            all_combined = random.choice(["add", "sub"])  # chooses between add and sub to generate both questions
+            # chooses between add and sub to generate both questions
+            all_combined = random.choice(["add", "sub"])
         if self.question_type == "add" or all_combined == "add":
             question = ("{} + {} = ".format(num_1, num_2))  # creates question
             self.question_answer = num_1 + num_2  # works out answer
         elif self.question_type == "sub" or all_combined == "sub":
             question = ("{} - {} = ".format(num_1, num_2))  # creates question
             self.question_answer = num_1 - num_2  # works out answer
-        self.question_label.config(text=question)  # changes question label so that it is the
+        # changes question label so that it is the question
+        self.question_label.config(text=question)
 
     def close_question(self, partner):
         # Put main menu button's back to normal...

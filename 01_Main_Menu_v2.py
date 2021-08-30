@@ -43,8 +43,6 @@ class Math:
 
     def math_addition(self):
         print("1 + 1 = ")
-        # get_addition = Addition()
-        # get_addition.help_text.configure(text="1 + 1 = ")
 
 
 # main routine
