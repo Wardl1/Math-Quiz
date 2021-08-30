@@ -4,7 +4,7 @@ This trials putting all the items in the list into one long string
 this string is then the text for a label on the GUI which displays the information
 integer items in the results list have to be converted into a string item
 each question is on a new line within the results string
-close and enter buttons do not work yet
+close and export buttons do not work yet
 Results GUI is not connected to the other GUI's yet
 """
 
