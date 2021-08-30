@@ -227,6 +227,9 @@ class QuestionGUI:
             # Disable enter button so that they can't enter in another number
             self.enter_button.config(state=DISABLED)
 
+            # Add question, user input and answer to results list for results history
+            self.question_results.append([self.question, user_attempt, right_or_wrong, self.question_answer])
+
             # Enable next button while the number of questions is under 10
             if self.question_number < 10:
                 self.next_button.config(state=NORMAL)
@@ -234,8 +237,7 @@ class QuestionGUI:
                 for i in self.question_results:
                     print(i)
 
-            # Add question, user input and answer to results list for results history
-            self.question_results.append([self.question, user_attempt, self.question_answer, right_or_wrong])
+
 
         except ValueError:
             self.evaluator_label.configure(text="Enter a number!!", fg="red")
