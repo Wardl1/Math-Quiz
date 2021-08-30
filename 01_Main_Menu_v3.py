@@ -3,7 +3,6 @@ this version continues on from the last with all
 buttons now in the GUI and all buttons have been formatted."""
 
 from tkinter import *
-from functools import partial  # To prevent unwanted additional windows
 
 
 class MathQuiz:
@@ -45,7 +44,8 @@ class MathQuiz:
         self.addition_button.grid(row=2)
 
         # Subtraction button (row 3)
-        self.subtraction_button = Button(self.main_menu_frame, text="Subtraction",
+        self.subtraction_button = Button(self.main_menu_frame,
+                                         text="Subtraction",
                                          font=("Arial", "14"),
                                          padx=10, pady=10,
                                          width=10,
@@ -55,7 +55,8 @@ class MathQuiz:
         self.subtraction_button.grid(row=3)
 
         # All combined button (row 4)
-        self.combined_button = Button(self.main_menu_frame, text="All Combined",
+        self.combined_button = Button(self.main_menu_frame,
+                                      text="All Combined",
                                       font=("Arial", "14"),
                                       padx=10, pady=10,
                                       width=10,

@@ -49,7 +49,8 @@ class MathQuiz:
         self.addition_button.grid(row=2)
 
         # Subtraction button (row 3)
-        self.subtraction_button = Button(self.main_menu_frame, text="Subtraction",
+        self.subtraction_button = Button(self.main_menu_frame,
+                                         text="Subtraction",
                                          font=("Arial", "14"),
                                          padx=10, pady=10,
                                          width=10,
@@ -59,7 +60,8 @@ class MathQuiz:
         self.subtraction_button.grid(row=3)
 
         # All combined button (row 4)
-        self.combined_button = Button(self.main_menu_frame, text="All Combined",
+        self.combined_button = Button(self.main_menu_frame,
+                                      text="All Combined",
                                       font=("Arial", "14"),
                                       padx=10, pady=10,
                                       width=10,
@@ -93,10 +95,11 @@ class QuestionGUI:
         self.question_box = Toplevel()
 
         # if users press at top, closes help and 'releases' help button
-        self.question_box.protocol('WM_DELETE_WINDOW', partial(self.close_question,
-                                                               partner))
+        self.question_box.protocol('WM_DELETE_WINDOW',
+                                   partial(self.close_question, partner))
         # Question Frame
-        self.question_frame = Frame(self.question_box, width=300, bg=background_color)
+        self.question_frame = Frame(self.question_box, width=300,
+                                    bg=background_color)
         self.question_frame.grid()
 
         # Question Heading (row 0)
@@ -130,24 +133,29 @@ class QuestionGUI:
         self.evaluator_label.grid(row=3)
 
         # Sets up new frame for buttons to get a nice layout
-        self.button_frame = Frame(self.question_box, width=300, bg=background_color)
+        self.button_frame = Frame(self.question_box, width=300,
+                                  bg=background_color)
         self.button_frame.grid(row=1)
 
         # Close button (row 0, column 0)
         self.close_button = Button(self.button_frame, text="Close",
-                                   width=8, bg="light grey", font="arial 10 bold",
-                                   command=partial(self.close_question, partner))
+                                   width=8, bg="light grey",
+                                   font="arial 10 bold",
+                                   command=partial(self.close_question,
+                                                   partner))
         self.close_button.grid(row=0, column=0)
 
         # Enter button (row 0, column 1)
         self.enter_button = Button(self.button_frame, text="Enter",
-                                   width=8, bg="light grey", font="arial 10 bold",
+                                   width=8, bg="light grey",
+                                   font="arial 10 bold",
                                    command=partial(self.enter_question))
         self.enter_button.grid(row=0, column=1)
 
         # Next button (row 0, column 2)
         self.next_button = Button(self.button_frame, text="Next",
-                                  width=8, bg="light grey", font="arial 10 bold",
+                                  width=8, bg="light grey",
+                                  font="arial 10 bold",
                                   command=partial(self.next_question))
         self.next_button.grid(row=0, column=2)
 

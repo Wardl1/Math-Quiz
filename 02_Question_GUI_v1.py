@@ -54,19 +54,22 @@ class QuestionGUI:
 
         # Close button (row 0, column 0)
         self.close_button = Button(self.button_frame, text="Close",
-                                   width=8, bg="light grey", font="arial 10 bold",
+                                   width=8, bg="light grey",
+                                   font="arial 10 bold",
                                    command=partial(self.close_question))
         self.close_button.grid(row=0, column=0)
 
         # Enter button (row 0, column 1)
         self.enter_button = Button(self.button_frame, text="Enter",
-                                   width=8, bg="light grey", font="arial 10 bold",
+                                   width=8, bg="light grey",
+                                   font="arial 10 bold",
                                    command=partial(self.enter_question))
         self.enter_button.grid(row=0, column=1)
 
         # Next button (row 0, column 2)
         self.next_button = Button(self.button_frame, text="Next",
-                                  width=8, bg="light grey", font="arial 10 bold",
+                                  width=8, bg="light grey",
+                                  font="arial 10 bold",
                                   command=partial(self.next_question))
         self.next_button.grid(row=0, column=2)
 
