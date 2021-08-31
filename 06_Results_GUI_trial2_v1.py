@@ -1,4 +1,4 @@
-"""Component 06 Results GUI trial 1 version 1
+"""Component 06 Results GUI trial 2 version 1
 Sets up design for the results GUI
 this trials setting the information as a table like display
 each item in each item in the list is given a new column and
