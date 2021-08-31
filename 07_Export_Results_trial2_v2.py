@@ -56,7 +56,7 @@ while has_error == "yes":
 
 # List of data type headers
 Details = ['Question', 'Your Answer', 'Mark', 'Correct Answer']
-with open(filename, 'w', newline='') as f:
+with open(filename + ".csv", 'w', newline='') as f:
     write = csv.writer(f)
     write.writerow(Details)  # writes data type headers
     write.writerows(results)  # writes results
