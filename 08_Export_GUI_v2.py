@@ -88,7 +88,8 @@ class ExportGUI:
             valid_char = "[A-Za-z0-9_]"
             for letter in filename:
                 if re.match(valid_char, letter):
-                    continue  # If the letter is valid, goes back and checks the next
+                    continue  # If the letter is valid,
+                    # goes back and checks the next
 
                 # No spaces allowed
                 elif letter == " ":  # otherwise, find problem
@@ -111,7 +112,7 @@ class ExportGUI:
                 break
             else:
                 print(
-                    "You entered a valid filename")  # or allow a valid file name
+                    "You entered a valid filename")
                 # List of data type headers
                 details = ['Question', 'Your Answer', 'Mark', 'Correct Answer']
                 with open(filename + ".csv", 'w', newline='') as f:
