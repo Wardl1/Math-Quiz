@@ -57,12 +57,12 @@ class ExportGUI:
         self.button_frame = Frame(self.export_frame, bg=background_color)
         self.button_frame.grid(row=4, pady=10)
 
-        # Close button (row 0, column 0)
-        self.close_button = Button(self.button_frame, text="Close",
-                                   width=8, bg="light grey",
-                                   font="arial 10 bold",
-                                   command=partial(self.close_export))
-        self.close_button.grid(row=0, column=0, padx=15)
+        # Cancel button (row 0, column 0)
+        self.cancel_button = Button(self.button_frame, text="Cancel",
+                                    width=8, bg="light grey",
+                                    font="arial 10 bold",
+                                    command=partial(self.cancel_export))
+        self.cancel_button.grid(row=0, column=0, padx=15)
 
         # Save button (row 0, column 1)
         self.save_button = Button(self.button_frame, text="Save",
@@ -71,7 +71,7 @@ class ExportGUI:
                                   command=partial(self.save_results))
         self.save_button.grid(row=0, column=1, padx=15)
 
-    def close_export(self):
+    def cancel_export(self):
         print("You wish to close Export GUI")  # prints to test button
 
     def save_results(self):

@@ -439,7 +439,7 @@ class ExportGUI:
         self.button_frame.grid(row=4, pady=10)
 
         # Close button (row 0, column 0)
-        self.cancel_button = Button(self.button_frame, text="Close",
+        self.cancel_button = Button(self.button_frame, text="Cancel",
                                     width=8, bg="light grey",
                                     font="arial 10 bold",
                                     command=partial(self.cancel_export))
