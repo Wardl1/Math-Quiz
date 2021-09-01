@@ -18,8 +18,6 @@ results = ['5 + 1 = ', 6, 'Correct', 6], ['1 + 2 = ', 3, 'Correct', 3], \
           ['2 + 3 = ', 5, 'Correct', 5]
 
 # Get filename, can't be blank / invalid
-# assume valid data for now.
-
 filename = ""
 has_error = "yes"
 while has_error == "yes":
