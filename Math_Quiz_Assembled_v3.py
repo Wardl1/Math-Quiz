@@ -401,7 +401,8 @@ class ExportGUI:
         # if users presses close at top, closes Export GUI and enables export
         # button on Results GUI
         self.export_box.protocol('WM_DELETE_WINDOW',
-                                 partial(self.cancel_export, partner))
+                                 partial(self.cancel_export, partner,
+                                         from_warning=from_warning))
 
         # Export Frame
         self.export_frame = Frame(self.export_box, width=300,
