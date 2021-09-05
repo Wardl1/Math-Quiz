@@ -1,7 +1,7 @@
 """10 Math Quiz Assembled version 2
 Warning GUI now closes when Export GUI is opened from Warning GUI
 line 401-402 - closes Warning GUI if Export GUI is opened from warning GUI
-line 523 - only enables export button if export GUI is opened from results GUI
+line 524 - only enables export button if export GUI is opened from results GUI
 """
 
 from tkinter import *
@@ -407,7 +407,8 @@ class ExportGUI:
         # if users presses close at top, closes Export GUI and enables export
         # button on Results GUI
         self.export_box.protocol('WM_DELETE_WINDOW',
-                                 partial(self.cancel_export, partner))
+                                 partial(self.cancel_export, partner,
+                                         from_warning=from_warning))
 
         # Export Frame
         self.export_frame = Frame(self.export_box, width=300,
