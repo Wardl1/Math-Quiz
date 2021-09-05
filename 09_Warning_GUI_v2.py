@@ -53,13 +53,13 @@ class WarningGUI:
         self.export_button = Button(self.button_frame, text="Export",
                                     width=8, bg="light grey",
                                     font="arial 10 bold",
-                                    command=partial(self.open_export_GUI))
+                                    command=partial(self.open_export))
         self.export_button.grid(row=0, column=1, padx=15)
 
     def close_warning(self):
         print("You wish to close Warning GUI")  # prints to test button
 
-    def open_export_GUI(self):
+    def open_export(self):
         print("Export GUI")  # prints to test button
 
 
